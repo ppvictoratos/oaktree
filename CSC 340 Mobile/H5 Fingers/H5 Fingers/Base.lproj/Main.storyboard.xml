@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="H5_Fingers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finger Frenzy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G52-CL-E2s">
+                                <rect key="frame" x="39" y="65" width="297" height="83"/>
+                                <color key="backgroundColor" red="0.33497536577193637" green="0.41950696243523311" blue="0.39913941882627685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.51647249097572967" blue="0.30928613246044856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="xna-br-a1j">
+                                <rect key="frame" x="133" y="238" width="109" height="191"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKF-3r-C0W">
+                                        <rect key="frame" x="43" y="0.0" width="23.5" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.51647249100000003" blue="0.30928613249999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="kEN-e5-PiU">
+                                        <rect key="frame" x="7.5" y="90" width="94" height="29"/>
+                                        <color key="backgroundColor" red="0.33497536579999998" green="0.41950696240000002" blue="0.39913941879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <action selector="NumberRocker:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Fm-fR-CeC"/>
+                                            <action selector="Stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pjm-hf-P90"/>
+                                        </connections>
+                                    </stepper>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mKb-Hy-8Jp">
+                                        <rect key="frame" x="0.0" y="161" width="109" height="31"/>
+                                        <color key="backgroundColor" red="0.33497536579999998" green="0.41950696240000002" blue="0.39913941879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="Not It"/>
+                                            <segment title="Teams"/>
+                                        </segments>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <action selector="SegmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="T7a-Cc-Obz"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="BxK-4D-sPO"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSw-ua-cL2">
+                                <rect key="frame" x="69" y="482" width="237" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HSw-ua-cL2" secondAttribute="height" multiplier="26:23" constant="74.217391304347842" id="YPY-Ul-AKO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="86"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" red="1" green="0.51647249100000003" blue="0.30928613249999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47522668393782386" green="0.41501904553780095" blue="0.41616488296098575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xna-br-a1j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4xw-Ze-Tg8"/>
+                            <constraint firstItem="G52-CL-E2s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="8Pd-lf-vex"/>
+                            <constraint firstItem="xna-br-a1j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C8r-41-hBb"/>
+                            <constraint firstItem="G52-CL-E2s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="EpF-qb-jUw"/>
+                            <constraint firstItem="HSw-ua-cL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FoS-mL-8Vj"/>
+                            <constraint firstItem="xna-br-a1j" firstAttribute="top" secondItem="G52-CL-E2s" secondAttribute="bottom" constant="90" id="Jox-wt-BJb"/>
+                            <constraint firstItem="HSw-ua-cL2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="LZM-UC-9Q0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HSw-ua-cL2" secondAttribute="bottom" constant="41" id="NLh-Pb-qAR"/>
+                            <constraint firstItem="HSw-ua-cL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VHf-em-PLF"/>
+                            <constraint firstItem="HSw-ua-cL2" firstAttribute="top" secondItem="xna-br-a1j" secondAttribute="bottom" constant="53" id="p8s-iS-Xlc"/>
+                            <constraint firstItem="G52-CL-E2s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vpl-18-JLT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" userLabel="Title"/>
+                    </view>
+                    <connections>
+                        <outlet property="ParticipantLabel" destination="FKF-3r-C0W" id="uTB-LH-1e9"/>
+                        <outlet property="SegmentedControl" destination="mKb-Hy-8Jp" id="Flb-78-ZzT"/>
+                        <outlet property="Stepper" destination="kEN-e5-PiU" id="69y-nk-eKS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
