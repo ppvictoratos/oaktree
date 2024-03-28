@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fingers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fingers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiH-EU-DmY">
+                                <rect key="frame" x="160.5" y="159.5" width="93" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6j-os-WDG">
+                                <rect key="frame" x="192.5" y="284.5" width="29" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q1g-tI-c3M">
+                                <rect key="frame" x="152.5" y="434" width="109" height="29"/>
+                                <segments>
+                                    <segment title="Not It"/>
+                                    <segment title="Teams"/>
+                                </segments>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-BD-ADT">
+                                <rect key="frame" x="160" y="352.5" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="11Z-Xd-vKk"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi5-Qa-Qs8">
+                                <rect key="frame" x="180.5" y="542.5" width="53" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <segue destination="bmS-ju-6rc" kind="show" identifier="goNextPage" id="2fb-My-AoE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YiH-EU-DmY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4af-FS-YQJ"/>
+                            <constraint firstItem="YiH-EU-DmY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-271" id="Alh-LZ-y72"/>
+                            <constraint firstItem="bR9-BD-ADT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-81" id="GEJ-ks-rrg"/>
+                            <constraint firstItem="Y6j-os-WDG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-133.5" id="Hln-CH-YAu"/>
+                            <constraint firstItem="gi5-Qa-Qs8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IEo-3x-XeJ"/>
+                            <constraint firstItem="q1g-tI-c3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ohq-rF-uad"/>
+                            <constraint firstItem="bR9-BD-ADT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TvO-8m-pal"/>
+                            <constraint firstItem="gi5-Qa-Qs8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="121" id="Zon-0Z-wL8"/>
+                            <constraint firstItem="q1g-tI-c3M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nKO-OO-sCu"/>
+                            <constraint firstItem="Y6j-os-WDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzn-Qs-Al7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fingersTitle" destination="YiH-EU-DmY" id="Ubd-En-9mv"/>
+                        <outlet property="gameMode" destination="q1g-tI-c3M" id="FDG-bU-sEA"/>
+                        <outlet property="gameStarter" destination="gi5-Qa-Qs8" id="Ly1-6h-gH8"/>
+                        <outlet property="playerIncrease" destination="bR9-BD-ADT" id="HMy-hN-iFS"/>
+                        <outlet property="players" destination="Y6j-os-WDG" id="X1f-SS-TfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="19"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="t1l-Ea-4fv">
+            <objects>
+                <viewController id="bmS-ju-6rc" customClass="SecondViewController" customModule="Fingers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="63j-vS-43u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igH-VD-OkD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="igH-VD-OkD" firstAttribute="leading" secondItem="8nc-Ty-6i3" secondAttribute="leading" id="Ty4-X8-Nea"/>
+                            <constraint firstItem="8nc-Ty-6i3" firstAttribute="trailing" secondItem="igH-VD-OkD" secondAttribute="trailing" id="gRv-zS-hLI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8nc-Ty-6i3"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="igH-VD-OkD" id="SKe-Zi-wlZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4IM-J9-8lA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321.7391304347827" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
